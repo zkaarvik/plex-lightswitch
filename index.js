@@ -19,7 +19,7 @@ app.post('/plexwebhook',  upload.single('thumb'), (req, res, next) => {
   console.log('Got webhook for', payload.event);
   // console.log(payload);
 
-  if (payload.event == 'media.play' || payload.Player.title == '55" TCL Roku TV') {
+  if (payload.event == 'media.play' && payload.Player.title == '55" TCL Roku TV') {
     console.log('Media play event from the TV. Turning off the living room and den lights.')
   }
 
